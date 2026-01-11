@@ -1,0 +1,129 @@
+###
+GET http://localhost:3000/api/users
+###
+GET http://localhost:3000/api/users/99
+
+###
+//สร้าง User ใหม่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username": "user10",
+    "password": "user1234",
+    "fristname": "user01firstname",
+    "lastname": "user01lastname"
+}
+
+###
+//สร้าง User ใหม่ไม่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+{
+    "password": "user1234",
+    "firstname": "user01firstname",
+    "lastname": "user01lastname"
+}
+
+
+-----------------------------------------------------------
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "bunyawat",
+    "email": "67022669@user.com"
+}
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "bunyawat",
+    "email": "67022669@user"
+}
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "bunyawat",
+    "email": "67022669@user.com",
+    "phone" : "120"
+}
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "bunyawat",
+    "email": "67022669@user.com",
+    "phone" : "1234567890"
+}
+###
+GET http://localhost:3000/api/roles
+
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "productid" : "12345",
+    "name" : "apple",
+    "price" : 1220.2 ,
+    "cost" : 10.2 ,
+    "note" : ""
+}
+
+###การบ้าน CRUD
+GET http://localhost:3000/api/roles
+
+###
+GET http://localhost:3000/api/roles/1
+
+###
+GET http://localhost:3000/api/roles/99
+
+###
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name": "TestRoles02"
+}
+
+###
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name": "TestRoles0200009898989898564645"
+}
+
+###
+PATCH http://localhost:3000/api/roles/3
+Content-Type: application/json
+
+{
+    "name": "TestRoles01"
+}
+
+###
+PATCH http://localhost:3000/api/roles/10
+Content-Type: application/json
+
+{
+    "name": "TestRoles01"
+}
+
+###
+PATCH http://localhost:3000/api/roles/1
+Content-Type: application/json
+
+{
+    "name": "TestRoles0111111111111111111111111111111111111111111"
+}
+
+###
+DELETE  http://localhost:3000/api/roles/5
